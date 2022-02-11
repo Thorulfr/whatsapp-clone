@@ -1,0 +1,29 @@
+{
+    "name": "whatsapp-clone",
+    "version": "1.0.0",
+    "description": "A WhatsApp clone built using Web Dev Simplified's Socket.io and React tutorial.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Thorulfr/whatsapp-clone.git"
+    },
+    "keywords": [
+        "whatsapp",
+        "react",
+        "socket",
+        "chat"
+    ],
+    "author": "Benjamin Holt",
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/Thorulfr/whatsapp-clone/issues"
+    },
+    "homepage": "https://github.com/Thorulfr/whatsapp-clone#readme",
+    "devDependencies": {
+        "concurrently": "^7.0.0"
+    }
+}
