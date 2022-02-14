@@ -26,16 +26,14 @@ export default function Login({ onIdSubmit }) {
             style={{ height: '100vh' }}
         >
             <Form onSubmit={handleSubmit} className="w-100">
-                <Form.Group>
+                <Form.Group className="mb-2">
                     <Form.Label>Enter Your ID:</Form.Label>
                     <Form.Control type="text" ref={idRef} required />
                 </Form.Group>
-                <Button type="submit">Login</Button>
-                <Button
-                    onClick={createNewId}
-                    variant="secondary"
-                    className="m-2"
-                >
+                <Button type="submit" className="me-2">
+                    Login
+                </Button>
+                <Button onClick={createNewId} variant="secondary">
                     Create a New ID
                 </Button>
             </Form>
