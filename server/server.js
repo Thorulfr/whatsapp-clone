@@ -1,6 +1,5 @@
 const httpServer = require('http').createServer();
 
-// Set Socket up on port 5000
 const io = require('socket.io')(httpServer, {
     cors: {
         origin: 'http://localhost:3000',
