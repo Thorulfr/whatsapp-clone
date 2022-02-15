@@ -11,7 +11,6 @@ export function useConversations() {
 }
 
 export function ConversationsProvider({ id, children }) {
-    // Declarations
     const [conversations, setConversations] = useLocalStorage(
         'conversations',
         []

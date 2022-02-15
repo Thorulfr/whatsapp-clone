@@ -1,7 +1,14 @@
-const io = require('socket.io')(5000);
+const httpServer = require('http').createServer();
+
+// Set Socket up on port 5000
+const io = require('socket.io')(httpServer, {
+    cors: {
+        origin: 'http://localhost:3000',
+        methods: ['GET', 'POST'],
+    },
+});
 
 io.on('connection', (socket) => {
-    console.log(socket.handshake.query.id);
     const id = socket.handshake.query.id;
     socket.join(id);
 
@@ -17,3 +24,5 @@ io.on('connection', (socket) => {
         });
     });
 });
+
+httpServer.listen(5000);
